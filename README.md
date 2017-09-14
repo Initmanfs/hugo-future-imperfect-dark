@@ -63,4 +63,4 @@ You can now view the website at the following link, [localhost:1313](http://loca
 
 ## License
 
-This theme is released under the GNUv3 license. Please read the [license](https://gitlab.com/initmanfs/theme/blob/master/LICENSE.md) for more information.
+This theme is released under the GNU GPLv3 license. Please read the [license](https://gitlab.com/initmanfs/theme/blob/master/LICENSE.md) for more information.
