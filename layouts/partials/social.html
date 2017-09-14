@@ -6,6 +6,10 @@
 <li><a href="//bitbucket.com/{{.}}" target="_blank" title="Bitbucket" class="fa fa-bitbucket"></a></li>
 {{ end }}
 
+{{ with .Site.Social.gitlab }}
+<li><a href="//gitlab.com/{{.}}" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+{{ end }}
+
 {{ with .Site.Social.jsfiddle }}
 <li><a href="//jsfiddle.com/{{.}}" target="_blank" title="JSFiddle" class="fa fa-jsfiddle"></a></li>
 {{ end }}
