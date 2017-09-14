@@ -1,5 +1,5 @@
 body, input, select, textarea, b, strong {
-    color: #000000;
+    color: #839496;
 }
 
 pre {
@@ -23,7 +23,7 @@ pre {
 }
 
     #header .main ul li > a {
-        color: #000000;
+        color: #839496;
         /* Theoretically for IE 8 & 9 (more valid) */
         /* ...but not required as filter works too */
         /* should come BEFORE filter */
@@ -93,7 +93,7 @@ article.post footer .stats {
     article.post h2,
     article.post h3,
     article.post h4 {
-        color: #000000;
+        color: #839496;
         /* Theoretically for IE 8 & 9 (more valid) */
         /* ...but not required as filter works too */
         /* should come BEFORE filter */
@@ -162,7 +162,7 @@ blockquote p {
         }
 
 .pagination .button {
-    background: white;
+    background: #001f27;
 }
 
 /** Social Share Button CSS **/

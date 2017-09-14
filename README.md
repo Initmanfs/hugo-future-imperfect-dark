@@ -1,10 +1,10 @@
-# Hugo Future Imperfect
+# Hugo Future Imperfect Dark
 
-Future Imperfect is a responsive theme tailored for blogging. The name is no coincidence which is a port of [HTML5 UP's theme](http://html5up.net/future-imperfect). Some extra features have also been implemented to assist you.
+This theme is based on [Future Imperfect](https://github.com/jpescador/hugo-future-imperfect) by [Julio Pescador](https://github.com/jpescador)
 
-![Hugo Future Imperfect Screenshot](https://raw.githubusercontent.com/jpescador/hugo-future-imperfect/master/images/screenshot.png)
+Future Imperfect Dark is a responsive theme tailored for blogging. The name is no coincidence which is a port of [HTML5 UP's theme](http://html5up.net/future-imperfect). Some extra features have also been implemented to assist you.
 
-Check out this [site](https://jpescador.com) if you are interested in seeing a live example.
+![Hugo Future Imperfect Screenshot](https://gitlab.com/initmanfs/theme/raw/master/images/screenshot.png)
 
 ## Getting Started
 
@@ -15,23 +15,6 @@ Run the following commands in your Hugo site directory:
     git clone https://github.com/jpescador/hugo-future-imperfect.git
 
 A folder called hugo-future-imperfect will be created. Navigate to this folder.
-
-## exampleSite
-
-There will be a folder in this theme called exampleSite. The structure of the folder will look something this:
-
-    exampleSite
-    ├── config.toml
-    ├── content
-        └── blog
-        │   ├── creating-a-new-theme.md
-        │   ├── goisforlovers.md
-        │   ├── hugoisforlovers.md
-        │   └── migrate-from-jekyll.md
-        └── about.md
-    ...
-
-Copy the config file from exampleSite to the root directory of your Hugo site.
 
 ## The Config File
 
@@ -78,12 +61,6 @@ Run the following command to view the content of the website:
 
 You can now view the website at the following link, [localhost:1313](http://localhost:1313)
 
-## About the Author
-
-Hugo Future Imperfect was ported and it's extra features were implemented by [Julio Pescador](https://jpescador.com)
-
-Send me a [tweet](https://twitter.com/julio_pescador), @julio_pescador, if you like the theme and are using it for your own personal use.
-
 ## License
 
-This theme is released under the MIT license. Please read the [license](https://github.com/jpescador/hugo-future-imperfect/blob/master/LICENSE.md) for more information.
+This theme is released under the GNUv3 license. Please read the [license](https://gitlab.com/initmanfs/theme/blob/master/LICENSE.md) for more information.
