@@ -3,15 +3,12 @@
 
     <!-- Intro -->
         <section id="intro">
-            {{ $pic := .Site.Params.intro.pic }}
+            {{ $pic := .Site.Params.pic }}
+            {{ $alt := .Site.Title }}
             {{ with $pic.src }}
-                {{ if $pic.circle }}
-                    <img src="{{ . }}" class="intro-circle" width="{{ $pic.width }}" alt="{{ $pic.alt }}" />
-                {{ else if $pic.imperfect }}
-                    <a href="/" class="logo"><img src="{{ . }}" alt="{{ $pic.alt }}" /></a>
-                {{ else }}
-                    <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $pic.alt }}" />
-                {{ end }}
+            <a href="/" class="logo{{ with $pic.type }}-{{ . }}{{ end }}">
+              <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $alt }}" />
+            </a>
             {{ end }}
             {{ with .Site.Params.intro }}
                 <header>
