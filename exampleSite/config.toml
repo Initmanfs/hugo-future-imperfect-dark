@@ -150,3 +150,5 @@ pluralizeListTitles = false
     twitter_domain  = ""
     twitter         = "julio_pescador"
     email           = ""
+[taxonomies]
+  category = "categories"
