@@ -17,8 +17,6 @@ pluralizeListTitles = false
     viewMorePostLink     = "/blog/"
 
 # Optional Params
-    # This will match the navbarTitle to the section of the website
-    dynamicTitles        = true
     # RSS icon that appear on the sidebar, next to the social media buttons
     rssAppearAtTop       = true
     rssAppearAtBottom    = true

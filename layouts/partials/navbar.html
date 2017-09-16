@@ -1,15 +1,6 @@
 <!-- Header -->
 <header id="header">
-    {{ if .Site.Params.dynamicTitles }}
-      {{ if .IsHome }}
-          <h1><a href="/">{{ .Site.Params.navbarTitle }}</a></h1>
-      {{ else }}
-          <h1><a href="/">{{ .Section }}</a></h1>
-      {{ end }}
-    {{ else }}
-      <h1><a href="/">{{ .Site.Params.navbarTitle }}</i></a></h1>
-    {{ end }}
-
+    <h1><a href="/">{{ .Site.Params.navbarTitle }}</i></a></h1>
     <nav class="links">
         <ul>
             {{ range .Site.Menus.main }}
