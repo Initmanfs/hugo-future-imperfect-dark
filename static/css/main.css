@@ -511,7 +511,9 @@
 			input[type="button"].disabled:before,
 			input[type="button"]:disabled:before,
 			.button.disabled:before,
-			.button:disabled:before {
+			.button:disabled:before,
+			.button.disabled:after,
+			.button:disabled:after {
 				color: rgba(42, 161, 152, 0.3) !important;
 			}
 
