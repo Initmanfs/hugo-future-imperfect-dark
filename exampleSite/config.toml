@@ -107,12 +107,6 @@ pluralizeListTitles = false
     weight = 3
 
 [[menu.main]]
-    name = "Itemized"
-    url = "/itemized/"
-    identifier = "fa fa-list"
-    weight = 4
-
-[[menu.main]]
     name = "Categories"
     url = "/categories/"
     identifier = "fa fa-sitemap"
