@@ -15,11 +15,12 @@
                 <h1>{{ .Data.Plural }}</h1>
             </header>
             {{ $data := .Data }}
+            {{ $LanguagePrefix := .LanguagePrefix }}
             {{ range $key, $value := $.Scratch.Get "categories" }}
                 <li>
                     <article>
                         <header>
-                            <a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
+                            <a href="{{ $LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
                             <span style="float:right;">{{ $value.Count }}</span>
                         </header>
                     </article>

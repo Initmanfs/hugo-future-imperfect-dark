@@ -1,0 +1,36 @@
+- id: recent_posts
+  translation: "Recent Posts"
+- id: view_more_posts
+  translation: "View More Posts"
+- id: category
+  translation:
+    one: "Category"
+    other: "Categories"
+- id: about
+  translation: "About"
+- id: learn_more
+  translation: "Learn More"
+- id: contact_reply
+  translation: "Replies Typically Within 24 Hours."
+- id: title_posts
+  translation: "Posts about {{.Title}}"
+- id: share
+  translation: "Share"
+- id: search
+  translation: "Search"
+- id: menu
+  translation: "Menu"
+- id: previous_page
+  translation: "Previous Page"
+- id: next_page
+  translation: "Next Page"
+- id: share_post
+  translation: "Share this post"
+- id: powered_by
+  translation: "Powered by"
+- id: continue_reading
+  translation: "Continue Reading"
+- id: nothing_yet
+  translation: "Nothing Yet"
+- id: translations
+  translation: "Translations"

@@ -1,0 +1,14 @@
+{{ if ($.Scratch.Get "menu") }}
+<section class="translations-menu">
+{{ else }}
+<section id="translations-menu">
+{{ end }}
+    <ul class="links">
+      <header><h3>Languages:</h3></header>
+      {{ range .Translations }}
+      <li>
+        <a href="{{ .Permalink }}" hreflang="{{ .Lang }}" ref="alternate"><p>{{ .Language.LanguageName }}</p></a>
+      </li>
+      {{ end }}
+    </ul>
+</section>

@@ -1,0 +1,36 @@
+- id: recent_posts
+  translation: "Articles Récents"
+- id: view_more_posts
+  translation: "Voir plus d'articles"
+- id: category
+  translation:
+    one: "Catégorie"
+    other: "Catégories"
+- id: about
+  translation: "À Propos"
+- id: learn_more
+  translation: "En savoir plus"
+- id: contact_reply
+  translation: "Réponse dans les 24 heures"
+- id: title_posts
+  translation: "Articles sur {{.Title}}"
+- id: share
+  translation: "Partager"
+- id: search
+  translation: "Rechercher"
+- id: menu
+  translation: "Menu"
+- id: previous_page
+  translation: "Page précédente"
+- id: next_page
+  translation: "Page suivante"
+- id: share_post
+  translation: "Partager cet article"
+- id: powered_by
+  translation: "Généré avec"
+- id: continue_reading
+  translation: "Continuer de lire"
+- id: nothing_yet
+  translation: "Il n'y a encore rien ici"
+- id: translations
+  translation: "Traductions"

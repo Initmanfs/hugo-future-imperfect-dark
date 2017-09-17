@@ -6,7 +6,7 @@
             {{ $pic := .Site.Params.pic }}
             {{ $alt := .Site.Title }}
             {{ with $pic.src }}
-            <a href="/" class="logo{{ with $pic.type }}-{{ . }}{{ end }}">
+            <a href="{{ "/" | relLangURL }}" class="logo{{ with $pic.type }}-{{ . }}{{ end }}">
               <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $alt }}" />
             </a>
             {{ end }}
@@ -31,8 +31,8 @@
         <section id="recent-posts">
             <ul class="posts">
                 <header>
-                    <h3>Recent Posts</h3>
-                </header>
+			<h3>{{ T "recent_posts" }}</h3>
+		</header>
                 {{ $.Scratch.Set "recentPosts" .Site.Pages }}
 
                 {{ with .Site.Params.postAmount.sidebar }}
@@ -60,11 +60,11 @@
                         <ul class="actions">
                             <li><a href=
                             {{ with .Site.Params.viewMorePostLink }}
-                                {{ . }}
+                                {{ . | relLangURL }}
                             {{ else }}
-                                "/post/"
+                                {{ "/post/" | relLangURL }}
                             {{ end }}
-                            class="button">View more posts</a></li>
+			    class="button">{{ i18n "view_more_posts" }}</a></li>
                         </ul>
                     </li>
                 {{ end }}
@@ -74,24 +74,26 @@
     <!-- This if statement only applies if someone goes to the /categories url -->
     <!-- Otherwise this section is shown for all other links -->
     {{ if ne ($.Scratch.Get "showCategories") false }}
-    <!-- Categories List -->
+
+        {{ if .Site.Params.categoriesByCount }}
+            {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
+        {{ else }}
+            {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
+        {{ end }}
+            {{ $CategoriesCount := ($.Scratch.Get "categories" | len) }}
+        <!-- Categories List -->
         <section id="categories">
             <ul class="posts">
                 <header>
-                    <h3><a href="/categories/">Categories</a></h3>
+			<h3><a href="{{ "/categories/" | relLangURL }}">{{ i18n "category" $CategoriesCount }}</a></h3>
                 </header>
 
-                {{ if .Site.Params.categoriesByCount }}
-                    {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
-                {{ else }}
-                    {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
-                {{ end }}
 
                 {{ range $key, $value := $.Scratch.Get "categories" }}
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/{{ $value.Name | urlize }}/">{{ $value.Name }}</a>
+                                <a href="{{ $.Site.LanguagePrefix }}/categories/{{ $value.Name | urlize }}/">{{ $value.Name }}</a>
                                 <span style="float:right;">{{ $value.Count }}</span>
                             </header>
                         </article>
@@ -104,11 +106,13 @@
     <!-- About -->
         {{ with .Site.Params.intro.about }}
         <section class="blurb">
-            <h2>About</h2>
-            <p>{{ . | safeHTML }}</p>
+		<h2>{{ i18n "about" }}</h2>
+            <p>{{ .text | safeHTML }}</p>
 
             <ul class="actions">
-                <li><a href="/about/" class="button">Learn More</a></li>
+            {{ with .url }}
+		          <li><a href="{{ . | relLangURL }}" class="button">{{ i18n "learn_more" }}</a></li>
+            {{ end }}
             </ul>
         </section>
         {{ end }}
@@ -125,7 +129,7 @@
                 {{ end }}
             </ul>
 
-            <p class="copyright">{{ with .Site.Copyright | safeHTML }}{{ . }}{{ else }}&copy; {{ .Site.LastChange.Year }} {{if isset .Site.Params "author" }}{{ .Site.Params.author}}{{ else }}{{ .Site.Title }}{{ end }}{{end}}. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+	    <p class="copyright">{{ with .Site.Copyright | safeHTML }}{{ . }}{{ else }}&copy; {{ .Site.LastChange.Year }} {{if isset .Site.Params "author" }}{{ .Site.Params.author}}{{ else }}{{ .Site.Title }}{{ end }}{{end}}. {{ i18n "powered_by" }} <a href="//gohugo.io" target="_blank">Hugo</a></p>
         </section>
 
 </section>

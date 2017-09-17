@@ -1,7 +1,8 @@
 baseurl = "http://hugo.spf13.com/"
-languageCode = "en-us"
-title = "Hugo Future Imperfect"
-theme = "hugo-future-imperfect"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Hugo Future Imperfect Dark"
+theme = "hugo-future-imperfect-dark"
 preserveTaxonomyNames = true
 paginate = 3
 disqusShortname = "shortname"
@@ -12,7 +13,7 @@ pluralizeListTitles = false
     # Sets the meta tag description, usually reserved for the main page
     description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "Future Imperfect"
+    navbarTitle          = "Future Imperfect Dark"
     # set this to the section name if section is not post
     viewMorePostLink     = "/blog/"
 
@@ -63,7 +64,7 @@ pluralizeListTitles = false
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
 [params.intro]
-    header    = "Hugo Future Imperfect"
+    header    = "Hugo Future Imperfect Dark"
 
     paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador with some extra goodies <i class='fa fa-hand-peace-o'></i>"
 
@@ -85,44 +86,117 @@ pluralizeListTitles = false
 [params.postAmount]
     sidebar = 2
 
+# Languages configurations
+[languages]
+
+[languages.en]
+    languageName = "English"
+    weight       = 2
+    title        = "Future Imperfect Dark"
+    # Sets the meta tag description, usually reserved for the main page
+    description  = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador and Initmanfs team. Powered by Hugo"
+    # This will appear on the top left of the navigation bar
+    navbarTitle  = "Future Imperfect Dark"
+
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[languages.en.intro]
+    header    = "Hugo Future Imperfect Dark"
+    paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador and Initmanfs team with some extra goodies <i class='fa fa-hand-peace-o'></i>"
+[languages.en.intro.about]
+    text     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+    url      = "/about/"
+
+[languages.fr]
+    languageName = "Français"
+    weight       = 1
+    title        = "Future Imperfect Sombre"
+    # Sets the meta tag description, usually reserved for the main page
+    description  = "Le thème de HTML5 UP, Future Imperfect avec quelques petites améliorations, adapté par Julio Pescador et l'équipe de Initmanfs. Généré par Hugo"
+    # This will appear on the top left of the navigation bar
+    navbarTitle  = "Future Imperfect Sombre"
+
+
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[languages.fr.intro]
+    header    = "Hugo Future Imperfect Sombre"
+    paragraph = "Un autre thème de site responsive par <a href=\"http://html5up.net\">HTML5 UP</a>. Adapté par Julio Pescador et l'équipe de Initmanfs avec quelques améliorations <i class='fa fa-hand-peace-o'></i>"
+[languages.fr.intro.about]
+    text     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+    url      = "/a-propos/"
+
+
+
 # Set up your menu items in the navigation bar
 # You can use identifier to prepend a font awesome icon to your text
 
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Home"
     url = "/"
     identifier = "fa fa-home"
     weight = 1
 
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "About"
     url = "/about/"
     identifier = "fa fa-id-card-o"
     weight = 2
 
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Blog"
     url = "/blog/"
     identifier = "fa fa-newspaper-o"
     weight = 3
 
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Categories"
     url = "/categories/"
     identifier = "fa fa-sitemap"
     weight = 5
 
-[[menu.main]]
+[[languages.en.menu.main]]
     name = "Contact"
     url = "/contact/"
     identifier = "fa fa-envelope-o"
     weight = 6
+
+[[languages.fr.menu.main]]
+    name = "Accueil"
+    url = "/"
+    identifier = "fa fa-home"
+    weight = 1
+
+[[languages.fr.menu.main]]
+    name = "À Propos"
+    url = "/a-propos/"
+    identifier = "fa fa-id-card-o"
+    weight = 2
+
+[[languages.fr.menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    identifier = "fa fa-newspaper-o"
+    weight = 3
+
+[[languages.fr.menu.main]]
+    name = "Catégories"
+    url = "/categories/"
+    identifier = "fa fa-sitemap"
+    weight = 4
+
+[[languages.fr.menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    identifier = "fa fa-envelope-o"
+    weight = 5
 
 # Insert your username and the icon will apear on the page as long as
 # socialAppearAtTop or socialAppearAtBottom is set to true in the params area
 # The social media icons will appear on the sidebar
 [social]
     github          = "jpescador"
+    gitlab          = ""
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""

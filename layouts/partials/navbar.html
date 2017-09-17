@@ -1,11 +1,11 @@
 <!-- Header -->
 <header id="header">
-    <h1><a href="/">{{ .Site.Params.navbarTitle }}</i></a></h1>
+  <h1><a href="{{"/" | relLangURL }}">{{ .Site.Params.navbarTitle }}</a></h1>
     <nav class="links">
         <ul>
             {{ range .Site.Menus.main }}
                 <li>
-                    <a href="{{ .URL }}">
+                    <a href="{{ .URL | relLangURL }}">
                             <i class="{{ .Identifier }}">&nbsp;</i>{{ .Name }}
                     </a>
                 </li>
@@ -16,18 +16,23 @@
         <ul>
             {{ if $.Scratch.Get "shareNav" }}
             <li id="share-nav" class="share-menu" style="display:none;">
-                <a class="fa-share-alt" href="#share-menu">Share</a>
+		    <a class="fa-share-alt" href="#share-menu">{{ i18n "share" }}</a>
             </li>
             {{ end }}
             <li class="search">
-                <a class="fa-search" href="#search">Search</a>
+		    <a class="fa-search" href="#search">{{ i18n "search" }}</a>
                 <form id="search" method="get" action="//google.com/search">
-                    <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL }}">
+			<input type="text" name="q" placeholder="{{ i18n "search" }}" />
+                	<input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL }}">
                 </form>
             </li>
+            {{ if .Site.IsMultiLingual }}
+            <li id="toggle-translation-menu">
+                <a class="fa-language" href="#translations-menu">{{ i18n "translations" }}</a>
+            </li>
+            {{ end }}
             <li class="menu">
-                <a class="fa-bars" href="#menu">Menu</a>
+		    <a class="fa-bars" href="#menu">{{ i18n "menu" }}</a>
             </li>
         </ul>
     </nav>
@@ -39,7 +44,7 @@
     <!-- Search -->
         <section>
             <form class="search" method="get" action="//google.com/search">
-                <input type="text" name="q" placeholder="Search" />
+		    <input type="text" name="q" placeholder="{{ i18n "search" }}" />
                 <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
             </form>
         </section>
@@ -49,7 +54,7 @@
             <ul class="links">
                 {{ range .Site.Menus.main }}
                     <li>
-                        <a href="{{ .URL }}">
+                        <a href="{{ .URL | relLangURL }}">
                             <h3>
                                 <i class="{{ .Identifier }}">&nbsp;</i>{{ .Name }}
                             </h3>
@@ -58,12 +63,15 @@
                 {{ end }}
             </ul>
         </section>
-
+        {{ if .Site.IsMultiLingual }}
+          {{ $.Scratch.Set "menu" true }}
+          {{ partial "translation-menu" . }}
+        {{ end }}
     <!-- Recent Posts -->
         <section>
             <ul class="links">
                 <header>
-                    <h3>Recent Posts</h3>
+			<h3>{{ i18n "recent_posts" }}</h3>
                 </header>
                 {{ with .Site.Params.postAmount.sidebar }}
                     {{ $.Scratch.Set "postLimit" . }}
@@ -88,3 +96,7 @@
         </section>
         -->
 </section>
+{{ if .Site.IsMultiLingual }}
+    {{ $.Scratch.Set "menu" false }}
+    {{ partial "translation-menu" . }}
+{{ end }}

@@ -4,7 +4,8 @@
 {{ end }}
 {{ if and (.IsNode) (eq .Data.Plural "categories") }}
     {{ if ne .Data.Plural (lower .Title) }}
-        {{ $.Scratch.Add "generalTitle" " Posts - " }}
+        {{ $.Scratch.Set "generalTitle" (i18n "title_posts" .) }}
+        {{ $.Scratch.Add "generalTitle" " - " }}
     {{ else }}
         {{ $.Scratch.Add "generalTitle" " - " }}
     {{ end }}

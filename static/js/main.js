@@ -21,7 +21,8 @@
 			$menu = $('#menu'),
 			$shareMenu = $('#share-menu'),
 			$sidebar = $('#sidebar'),
-			$main = $('#main');
+			$main = $('#main'),
+			$translationsMenu = $('#translations-menu');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -49,6 +50,7 @@
 
 		$menu.appendTo($body);
 		$shareMenu.appendTo($body);
+		$translationsMenu.appendTo($body);
 
 		$menu.panel({
 			delay: 500,
@@ -74,6 +76,17 @@
 			visibleClass: 'is-share-visible'
 		});
 
+		$translationsMenu.panel({
+			delay: 500,
+			hideOnClick: true,
+			hideOnEscape: true,
+			hideOnSwipe: true,
+			resetScroll: true,
+			resetForms: true,
+			side: 'top',
+			target: $body,
+			visibleClass: 'is-translations-visible'
+		});
 		// Menu.
 			/*$menu
 				.appendTo($body)
@@ -138,6 +151,18 @@
 						$intro.prependTo($sidebar);
 					});
 
+			// Translations menu
+			//$translationsMenu = $('#wrapper .translations-menu');
+			//$body
+			//	.on('click', '[href="#translations-menu"]', function(event) {
+			//		event.preventDefault();
+			//		// Not visible?
+			//		if (!$translationsMenu.is(':visible')) {
+			//			$translationsMenu.show();
+			//		} else {
+			//			$translationsMenu.hide()
+				//	}
+			//	});
 	});
 
 })(jQuery);
