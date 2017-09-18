@@ -7,7 +7,7 @@
       <header><h3>Languages:</h3></header>
       {{ range .Translations }}
       <li>
-        <a href="{{ .Permalink }}" hreflang="{{ .Lang }}" ref="alternate"><p>{{ .Language.LanguageName }}</p></a>
+        <a href="{{ .Permalink }}" hreflang="{{ .Lang }}" rel="alternate"><p>{{ .Language.LanguageName }}</p></a>
       </li>
       {{ end }}
     </ul>

@@ -12,7 +12,7 @@
     {{ .Render "featured" }}
     {{ if .IsTranslated }}
     <section id="translations">
-      This post is also available in 
+      This post is also available in
       {{ $TranslationsSize := add (len .Translations) -1 }}
       {{ range $index, $element := .Translations }}
           {{ if gt (len .Translations) 1 }}
@@ -22,7 +22,7 @@
                 ,
               {{ end }}
           {{ end }}
-          <a href="{{ .Permalink }}" hreflang="{{ .Lang }}" ref="alternate"> {{ .Language.LanguageName }}</a>
+          <a href="{{ .Permalink }}" hreflang="{{ .Lang }}" rel="alternate"> {{ .Language.LanguageName }}</a>
       {{ end }}
     </section>
     {{ end }}
