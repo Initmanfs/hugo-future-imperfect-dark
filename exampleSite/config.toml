@@ -51,6 +51,19 @@ pluralizeListTitles = false
     repo      = ""
     branch    = ""
 
+[params.piwik]
+    enabled = true
+    # URL to the root of the piwik installation.
+    # Can include paths after the TLD (e.g https://example.com/piwik/)
+    host = "https://piwik.example.com/"
+    # ID number of this site. Defaults to 1 if not included
+    site_id = 2
+    # Include <noscript> tags to track users with javascript disabled
+    track_nojs = true
+    # Include a link in the site footer to allow users to opt out of analytics
+    enable_optout = true
+
+
 # Enable or disable specifics share buttons
 [params.share]
     twitter     = true

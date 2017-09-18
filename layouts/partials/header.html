@@ -68,9 +68,10 @@
 
         {{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
             {{ template "_internal/google_analytics.html" . }}
+            {{ partial "piwik.html" . }}
         {{ end }}
     </head>
     <body>
-
+      {{ partial "piwik.html" . }}
       <!-- Wrapper -->
       <div id="wrapper">
