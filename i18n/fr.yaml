@@ -34,3 +34,7 @@
   translation: "Il n'y a encore rien ici"
 - id: translations
   translation: "Traductions"
+- id: author_image
+  translation: "Photo de profil de {{ . }}"
+- id: author_website
+  translation: "Site internet de {{ . }}"

@@ -1,0 +1,30 @@
+{{ with (index .Site.Data.authors .Params.author) }}
+<div class="author-details" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <h3>
+    {{ if .link }}
+      <a href="{{ .link }}" title="{{ i18n "author_website" . }}" taget="_blank" itemprop="url">
+        <span itemprop="name">{{ .display_name }}</span>
+      </a>
+    {{ else }}
+      <span itemprop="name">{{ .display_name }}</span>
+    {{ end }}
+    </h3>
+    <div class="author-more">
+      {{ if .image }}
+      <img src="{{ .image }}" alt="{{ i18n "author_image" . }}" itemprop="image" />
+      {{ end }}
+      <p itemprop="description">
+        {{ if .bio }}
+          {{ .bio | markdownify }}
+        {{ else if .short_bio }}
+          {{ .short_bio | markdownify }}
+        {{ end }}
+      </p>
+    </div>
+    {{ if .social }}
+    <ul class="icons">
+        {{ partial "social" .social }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}

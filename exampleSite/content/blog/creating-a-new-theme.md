@@ -1,5 +1,5 @@
 +++
-author = "Theme author"
+author = "example"
 categories = ["Hugo"]
 date = "2014-09-28"
 description = "Learn how to create a theme on Hugo"

@@ -16,7 +16,11 @@
         <time class="published"
             datetime='{{ ($.Scratch.Get "dateType").Format "2006-01-02" }}'>
             {{ ($.Scratch.Get "dateType").Format "January 2, 2006" }}</time>
+        {{ with (index .Site.Data.authors .Params.author) }}
+        <span class="author">{{ .display_name }}</span>
+        {{ else }}
         <span class="author">{{ .Params.author }}</span>
+        {{ end }}
         {{ if .Site.Params.includeReadingTime }}
             <p>{{ .ReadingTime }} minute read</p>
         {{ end }}

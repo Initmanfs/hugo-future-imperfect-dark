@@ -22,7 +22,7 @@
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 {{ end }}
                 {{ if .Site.Params.socialAppearAtTop }}
-                    {{ partial "social" . }}
+                    {{ partial "social" .Site.Social }}
                 {{ end }}
             </ul>
         </section>
@@ -125,7 +125,7 @@
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 {{ end }}
                 {{ if .Site.Params.socialAppearAtBottom }}
-                    {{ partial "social" . }}
+                    {{ partial "social" .Site.Social }}
                 {{ end }}
             </ul>
 

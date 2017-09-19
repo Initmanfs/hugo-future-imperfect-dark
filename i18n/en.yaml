@@ -34,3 +34,7 @@
   translation: "Nothing Yet"
 - id: translations
   translation: "Translations"
+- id: author_image
+  translation: "{{ .display_name }}'s profile picture"
+- id: author_website
+  translation: "{{ .display_name }}'s website"
