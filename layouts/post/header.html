@@ -22,7 +22,7 @@
         <span class="author">{{ .Params.author }}</span>
         {{ end }}
         {{ if .Site.Params.includeReadingTime }}
-            <p>{{ .ReadingTime }} minute read</p>
+            <p>{{ i18n "reading_time" .ReadingTime }}</p>
         {{ end }}
         <!--<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>-->
     </div>

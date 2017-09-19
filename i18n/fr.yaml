@@ -20,6 +20,10 @@
   translation: "Rechercher"
 - id: menu
   translation: "Menu"
+- id: reading_time
+  translation:
+    one: "Une minute de lecture"
+    other: "{{ .Count }} minutes de lecture"
 - id: previous_page
   translation: "Page précédente"
 - id: next_page
