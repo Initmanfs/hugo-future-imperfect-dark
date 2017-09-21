@@ -10,6 +10,9 @@
             <div id="content">
                 {{ .Content }}
             </div>
+            <footer>
+              {{ partial "footer-git" . }}
+            </footer>
         </article>
     </div>
     {{ partial "sidebar" . }}

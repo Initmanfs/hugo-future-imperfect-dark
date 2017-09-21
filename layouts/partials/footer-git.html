@@ -1,0 +1,5 @@
+{{ if .GitInfo }}
+<div class="git-details">
+   “{{ .Title }}” {{ i18n "git_last_modified" .GitInfo }} {{ if .Site.Params.gitrepo }}- <a class="hide-child link primary-color" href="{{ .Site.Params.gitrepo }}/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.Subject }} ({{ .GitInfo.AbbreviatedHash }})</a>{{ end }}
+</div>
+{{ end }}

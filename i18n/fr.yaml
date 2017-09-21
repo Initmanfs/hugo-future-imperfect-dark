@@ -42,3 +42,7 @@
   translation: "Photo de profil de {{ . }}"
 - id: author_website
   translation: "Site internet de {{ . }}"
+- id: git_last_modified
+  translation: 'a été modifié pour la dernière fois le {{ .AuthorDate.Format "January 2, 2006" }} :'
+- id: improve_content
+  translation: "Améliorer ce contenu"

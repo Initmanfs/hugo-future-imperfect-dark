@@ -31,7 +31,13 @@
     </div>
 
     <footer>
-      {{ .Render "footer-category" }}
+      {{ partial "footer-git" . }}
+      <div class="information">
+        {{ .Render "footer-category" }}
+        {{ if .Site.Params.gitrepo }}
+        <a class="button" href="{{ .Site.Params.gitrepo }}/edit/master/content/{{ .File.Path }}" title="{{ i18n "improve_content" }}">{{ i18n "improve_content" }}</a>
+        {{ end }}
+      </div>
       {{ .Render "footer-about-author" }}
     </footer>
 </article>
