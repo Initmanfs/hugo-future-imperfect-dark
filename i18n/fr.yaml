@@ -13,7 +13,7 @@
 - id: contact_reply
   translation: "Réponse dans les 24 heures"
 - id: title_posts
-  translation: "Articles sur {{.Title}}"
+  translation: "Articles sur {{.Title }}"
 - id: share
   translation: "Partager"
 - id: search
@@ -39,9 +39,9 @@
 - id: translations
   translation: "Traductions"
 - id: author_image
-  translation: "Photo de profil de {{ . }}"
+  translation: "Photo de profil de {{ .display_name }}"
 - id: author_website
-  translation: "Site internet de {{ . }}"
+  translation: "Site internet de {{ .display_name }}"
 - id: git_last_modified
   translation: 'a été modifié pour la dernière fois le {{ .AuthorDate.Format "January 2, 2006" }} :'
 - id: improve_content
