@@ -64,8 +64,6 @@ pluralizeListTitles = false
     site_id = 2
     # Include <noscript> tags to track users with javascript disabled
     track_nojs = true
-    # Include a link in the site footer to allow users to opt out of analytics
-    enable_optout = true
 
 
 # Enable or disable specifics share buttons
