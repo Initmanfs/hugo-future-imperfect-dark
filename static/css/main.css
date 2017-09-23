@@ -1351,6 +1351,9 @@
 					text-transform: uppercase;
 					white-space: nowrap;
 				}
+				.post > header .meta > p {
+					text-align: left;
+				}
 		.post > #translations {
 			margin-bottom: 1em;
 		}
