@@ -109,7 +109,7 @@ pluralizeListTitles = false
 [languages.en.intro]
     header    = "Hugo Future Imperfect Dark"
     paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador and Initmanfs team with some extra goodies <i class='fa fa-hand-peace-o'></i>"
-[languages.en.intro.about]
+[languages.en.about]
     text     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
     url      = "/about/"
 
@@ -128,7 +128,7 @@ pluralizeListTitles = false
 [languages.fr.intro]
     header    = "Hugo Future Imperfect Sombre"
     paragraph = "Un autre thème de site responsive par <a href=\"http://html5up.net\">HTML5 UP</a>. Adapté par Julio Pescador et l'équipe de Initmanfs avec quelques améliorations <i class='fa fa-hand-peace-o'></i>"
-[languages.fr.intro.about]
+[languages.fr.about]
     text     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
     url      = "/a-propos/"
 

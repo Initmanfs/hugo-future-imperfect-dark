@@ -104,7 +104,7 @@
     {{ end }}
 
     <!-- About -->
-        {{ with .Site.Params.intro.about }}
+        {{ with .Site.Params.about }}
         <section class="blurb">
 		<h2>{{ i18n "about" }}</h2>
             <p>{{ .text | safeHTML }}</p>
