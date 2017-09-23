@@ -199,11 +199,6 @@
 	p {
 		margin: 0 0 2em 0;
 	}
-	p,
-	blockquote {
-		text-align: justify;
-	}
-
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #839496;
@@ -1357,6 +1352,12 @@
 		.post > #translations {
 			margin-bottom: 1em;
 		}
+
+	#content p,
+	#content blockquote {
+		text-align: justify;
+	}
+
 		#content img {
         max-width: 100%;
     }
