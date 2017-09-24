@@ -1,4 +1,9 @@
-<article class="post">
+<article class="post" itemscope itemtype="http://schema.org/Article" itemref="intro">
+    <meta itemprop="inLanguage" content="{{ .Lang }}" />
+    {{ with .Site.Params.license }}
+    <meta itemprop="license" content="{{ . }}" />
+    {{ end }}
+    <meta itemprop="headline" content="{{ .Content | truncate 109 }}" />
     {{ .Render "header" }}
 
     {{ if not .Site.Params.socialShareDisabled }}
@@ -26,7 +31,7 @@
       {{ end }}
     </section>
     {{ end }}
-    <div id="content">
+    <div id="content" itemprop="articleBody">
         {{ .Content }}
     </div>
 

@@ -48,6 +48,9 @@ pluralizeListTitles = false
     enableGitInfo        = true
     gitrepo              = "https://gitlab.com/example/exampleWebSite"
 
+    # License link for the content (used for metadata)
+    license             = "http://somelinktothelicense"
+
 # Disqus will take priority over staticman due to its ease of use. Feel free to check out both and decide.
 [params.staticman]
     staticman = false

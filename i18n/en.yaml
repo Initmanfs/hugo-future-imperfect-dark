@@ -43,6 +43,6 @@
 - id: author_website
   translation: "{{ .display_name }}'s website"
 - id: git_last_modified
-  translation: 'was last updated on {{ .AuthorDate.Format "January 2, 2006" }}:'
+  translation: 'was last updated on'
 - id: improve_content
   translation: "Improve this content"

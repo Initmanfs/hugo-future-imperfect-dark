@@ -2,17 +2,20 @@
 <section id="sidebar">
 
     <!-- Intro -->
-        <section id="intro">
+        <section id="intro" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="url" content="{{ .Site.BaseURL }}">
             {{ $pic := .Site.Params.pic }}
             {{ $alt := .Site.Title }}
             {{ with $pic.src }}
-            <a href="{{ "/" | relLangURL }}" class="logo{{ with $pic.type }}-{{ . }}{{ end }}">
-              <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $alt }}" />
+            <a href="{{ "/" | relLangURL }}" class="logo{{ with $pic.type }}-{{ . }}{{ end }}" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="height" content="80" />
+              <meta itemprop="width" content="80" />
+              <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $alt }}" itemprop="url"/>
             </a>
             {{ end }}
             {{ with .Site.Params.intro }}
                 <header>
-                    <h2>{{ .header }}</h2>
+                    <h2 itemprop="name">{{ .header }}</h2>
                     <p>{{ .paragraph | safeHTML }}</p>
                 </header>
             {{ end }}
