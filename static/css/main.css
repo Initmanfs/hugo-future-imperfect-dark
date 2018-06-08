@@ -1482,11 +1482,12 @@ dl dd {
     display: inline-block;
     height: 100%;
     margin: auto 1em auto 0;
+    max-height: 10em;
     max-width: 10em;
     border-radius: 50%;
 }
 .post > footer > .author-details p {
-    margin: 0;
+    margin: auto 0;
     text-align: justify;
 }
 
