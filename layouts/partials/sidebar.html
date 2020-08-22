@@ -46,7 +46,7 @@
                     {{ $.Scratch.Set "postLimit" 5 }}
                 {{ end }}
 
-                {{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "post") }}
+                {{ range (where .Data.Pages "Type" "post" | first ($.Scratch.Get "postLimit")) }}
                     <li>
                         <article>
                             <header>
