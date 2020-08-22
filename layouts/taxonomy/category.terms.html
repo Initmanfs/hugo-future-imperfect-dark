@@ -15,7 +15,7 @@
                 <h1>{{ .Data.Plural }}</h1>
             </header>
             {{ $data := .Data }}
-            {{ $LanguagePrefix := .LanguagePrefix }}
+            {{ $LanguagePrefix := $.Site.LanguagePrefix }}
             {{ range $key, $value := $.Scratch.Get "categories" }}
                 <li>
                     <article>
