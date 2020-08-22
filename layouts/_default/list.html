@@ -9,7 +9,7 @@
         {{ if .Site.Params.orderByPublishDate }}
             {{ $paginator := .Paginate (where .Data.Pages.ByPublishDate.Reverse "Type" "post") }}
         {{ else }}
-            {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
         {{ end }}
 
         {{ range .Paginator.Pages }}
